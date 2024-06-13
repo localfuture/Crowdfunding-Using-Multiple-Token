@@ -736,6 +736,52 @@
       "artifacts": [
         "MyToken"
       ]
+    },
+    "/Users/anandalex/DappLearning/Crowdfunding-Using-Multiple-Token/contracts/CrowdFundingMulti.sol": {
+      "lastModificationDate": 1718289193285,
+      "contentHash": "e08fd48f50a4f9f524844f8977b465c6",
+      "sourceName": "contracts/CrowdFundingMulti.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.20"
+      ],
+      "artifacts": [
+        "CrowdFund"
+      ]
     }
   }
 }
