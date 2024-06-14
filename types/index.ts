@@ -22,7 +22,5 @@ export type { IERC20 } from "./@openzeppelin/contracts/token/ERC20/IERC20";
 export { IERC20__factory } from "./factories/@openzeppelin/contracts/token/ERC20/IERC20__factory";
 export type { CrowdFunding } from "./contracts/CrowdFunding";
 export { CrowdFunding__factory } from "./factories/contracts/CrowdFunding__factory";
-export type { CrowdFund } from "./contracts/CrowdFundingMulti.sol/CrowdFund";
-export { CrowdFund__factory } from "./factories/contracts/CrowdFundingMulti.sol/CrowdFund__factory";
 export type { MyToken } from "./contracts/MyToken";
 export { MyToken__factory } from "./factories/contracts/MyToken__factory";

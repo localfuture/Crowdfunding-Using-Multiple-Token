@@ -32,7 +32,6 @@ export interface CrowdFundingInterface extends Interface {
       | "getCampaign"
       | "getContribution"
       | "refund"
-      | "token"
       | "withdrawFunds"
   ): FunctionFragment;
 
@@ -50,7 +49,7 @@ export interface CrowdFundingInterface extends Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "contribute",
-    values: [BigNumberish, BigNumberish]
+    values: [BigNumberish, AddressLike, BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: "createCampaign",
@@ -68,7 +67,6 @@ export interface CrowdFundingInterface extends Interface {
     functionFragment: "refund",
     values: [BigNumberish]
   ): string;
-  encodeFunctionData(functionFragment: "token", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "withdrawFunds",
     values: [BigNumberish]
@@ -94,7 +92,6 @@ export interface CrowdFundingInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "refund", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "token", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "withdrawFunds",
     data: BytesLike
@@ -167,7 +164,7 @@ export interface CrowdFunding extends BaseContract {
   >;
 
   contribute: TypedContractMethod<
-    [_id: BigNumberish, _amount: BigNumberish],
+    [_id: BigNumberish, _token: AddressLike, _amount: BigNumberish],
     [void],
     "nonpayable"
   >;
@@ -197,8 +194,6 @@ export interface CrowdFunding extends BaseContract {
   >;
 
   refund: TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;
-
-  token: TypedContractMethod<[], [string], "view">;
 
   withdrawFunds: TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;
 
@@ -230,7 +225,7 @@ export interface CrowdFunding extends BaseContract {
   getFunction(
     nameOrSignature: "contribute"
   ): TypedContractMethod<
-    [_id: BigNumberish, _amount: BigNumberish],
+    [_id: BigNumberish, _token: AddressLike, _amount: BigNumberish],
     [void],
     "nonpayable"
   >;
@@ -264,9 +259,6 @@ export interface CrowdFunding extends BaseContract {
   getFunction(
     nameOrSignature: "refund"
   ): TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;
-  getFunction(
-    nameOrSignature: "token"
-  ): TypedContractMethod<[], [string], "view">;
   getFunction(
     nameOrSignature: "withdrawFunds"
   ): TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;

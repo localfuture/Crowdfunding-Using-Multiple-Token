@@ -46,10 +46,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.CrowdFunding__factory>;
     getContractFactory(
-      name: "CrowdFund",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.CrowdFund__factory>;
-    getContractFactory(
       name: "MyToken",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MyToken__factory>;
@@ -95,11 +91,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.CrowdFunding>;
     getContractAt(
-      name: "CrowdFund",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.CrowdFund>;
-    getContractAt(
       name: "MyToken",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -137,10 +128,6 @@ declare module "hardhat/types/runtime" {
       name: "CrowdFunding",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.CrowdFunding>;
-    deployContract(
-      name: "CrowdFund",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.CrowdFund>;
     deployContract(
       name: "MyToken",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -186,11 +173,6 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.CrowdFunding>;
-    deployContract(
-      name: "CrowdFund",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.CrowdFund>;
     deployContract(
       name: "MyToken",
       args: any[],
