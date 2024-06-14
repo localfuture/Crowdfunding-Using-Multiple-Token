@@ -3,7 +3,7 @@ import { loadFixture, time } from "@nomicfoundation/hardhat-network-helpers";
 import { expect } from "chai";
 import { ethers, network } from "hardhat";
 
-import { deployLockFixture } from "./crowdFunding.fixture";
+import { deployLockFixture, deployThreeTokenFixture } from "./crowdFunding.fixture";
 import { Signers } from "./types";
 
 describe("CrowdFunding", function () {
@@ -78,7 +78,7 @@ describe("CrowdFunding", function () {
         owner,
         address1,
         address2
-      } = await this.loadFixture(deployLockFixture);
+      } = await this.loadFixture(deployThreeTokenFixture);
 
       this.token1 = token1;
       this.token1_address = token1_address;
@@ -98,6 +98,10 @@ describe("CrowdFunding", function () {
         await this.crowdFunding.connect(this.address1).createCampaign(5000,40000);
 
         await this.crowdFunding.connect(this.address2).contribute(1, this.token2_address, 300);
+        await this.crowdFunding.connect(this.address2).contribute(1, this.token3_address, 100);
+
+        const getContribution = await this.crowdFunding.connect(this.address1).getContribution(1, this.address2);
+        console.log(getContribution);
 
     })
   })
