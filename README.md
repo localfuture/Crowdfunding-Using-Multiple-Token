@@ -1,11 +1,4 @@
-# Crowd Funding Using Single Token
+## DAO Voting
+"DAO" has formed. This group is like a big family that shares a special treasury. Everyone who joins puts in some money, and together, they decide how to use it. This treasury is not just for saving; it's for helping others, especially during the festival. The members of the DAO come together to make sure everyone in their community can enjoy the celebrations. They use the treasury to support local artists, help those in need, and make the season even more special for everyone.
 
-The use of blockchains really stands out when it comes to clear-cut crowdfunding. People can easily gather funds for their causes, and donors have the freedom to contribute using ERC-20 token.
-
-A smart contract that facilitates setting up crowdfunding campaigns and allows donations in form of an already deployed ERC-20 contract. 
-
-## Specifications
-- Anyone can create a new campaign by specifying the goal amount (in USD), and the duration.
-- Any user, except for the creator of the campaign, can donate to any campaign using the token.
-- Users can cancel their donations anytime for a particular campaign before the deadline has passed.
-- If after the deadline has passed, the goal has not been reached, the campaign is said to be unsuccessful and donors can get their contributions back.
+A DAO is a type of organization represented by rules encoded as a computer program that is transparent, controlled by the organization members and not influenced by a central government. In this context, the DAO is a system where decisions are made collectively by its members through voting.
